@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:layout_marginTop="80dp">
+
+    <!-- Logo -->
+
+    <!-- App Title -->
+
+    <!-- Subtitle -->
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="230dp"
+        android:layout_height="218dp"
+        android:layout_marginTop="80dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/logo_blue"
+        app:layout_constraintBottom_toTopOf="@id/titleText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Welcome to MediGuard"
+        android:textColor="#1E3A8A"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoImage" />
+
+    <!-- Login Button -->
+
+    <!-- Sign Up Button -->
+
+    <TextView
+        android:id="@+id/subTitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="MediGuard predicts medicine expiry risks and ensures \n safe management. Sign up to receive smart alerts \n and track inventory easily."
+        android:gravity="center"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#1E3A8A"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subTitleText" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#E5E7EB"
+        android:text="Sign Up"
+        android:textColor="#1E3A8A"
+        app:layout_constraintEnd_toEndOf="@id/btnLogin"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/btnLogin"
+        app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
