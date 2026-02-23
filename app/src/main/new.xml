@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:padding="16dp"
+    android:background="@android:color/white">
+
+    <ImageView android:id="@+id/backButton" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:src="@drawable/ic_arrow_back"
+        app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <TextView android:id="@+id/logInTitle" android:layout_width="0dp"
+        android:layout_height="wrap_content" android:text="Log In" android:textSize="24sp"
+        android:textStyle="bold" android:textColor="#1E3A8A" android:gravity="center"
+        app:layout_constraintTop_toTopOf="@+id/backButton"
+        app:layout_constraintBottom_toBottomOf="@+id/backButton"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView android:id="@+id/welcomeText" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Welcome" android:textSize="22sp"
+        android:textStyle="bold" android:textColor="#1E3A8A"
+        app:layout_constraintTop_toBottomOf="@id/logInTitle"
+        app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="40dp" />
+
+    <TextView android:id="@+id/subTitleText" android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="MediGuard helps you monitor medicine expiry and manage inventory efficiently with smart AI-powered alerts."
+        android:textColor="#666666" android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView android:id="@+id/emailLabel" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Email" android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/subTitleText"
+        app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="24dp" />
+
+    <EditText android:id="@+id/emailEditText" android:layout_width="0dp"
+        android:layout_height="50dp" android:hint="example@example.com"
+        android:inputType="textEmailAddress" android:background="@drawable/edit_text_login_background"
+        android:padding="12dp" app:layout_constraintTop_toBottomOf="@id/emailLabel"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView android:id="@+id/passwordLabel" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Password" android:textSize="16sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/emailEditText"
+        app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="16dp" />
+
+    <EditText android:id="@+id/passwordEditText" android:layout_width="0dp"
+        android:layout_height="50dp" android:hint="************" android:inputType="textPassword"
+        android:background="@drawable/edit_text_login_background" android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLabel"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp" />
+
+    <TextView android:id="@+id/forgotPasswordButton" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Forget Password"
+        android:textColor="#1E3A8A" app:layout_constraintTop_toBottomOf="@id/passwordEditText"
+        app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="8dp" />
+
+    <Button android:id="@+id/loginButton" android:layout_width="0dp" android:layout_height="50dp"
+        android:backgroundTint="#2563EB" android:text="Log In"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/forgotPasswordButton"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <TextView android:id="@+id/orSignUpWith" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="or sign up with"
+        android:textColor="@android:color/darker_gray" android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/loginButton"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <LinearLayout android:id="@+id/socialLoginLayout" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/orSignUpWith"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <ImageButton android:id="@+id/googleLoginButton" android:layout_width="50dp"
+            android:layout_height="50dp" android:src="@drawable/google_logo"
+            android:background="@drawable/social_button_background"
+            android:contentDescription="Google Login" android:scaleType="centerInside"
+            android:layout_marginEnd="16dp" />
+
+        <ImageButton android:id="@+id/facebookLoginButton" android:layout_width="50dp"
+            android:layout_height="50dp" android:src="@drawable/facebook_logo"
+            android:background="@drawable/social_button_background"
+            android:contentDescription="Facebook Login" android:scaleType="centerInside" />
+
+    </LinearLayout>
+
+    <TextView android:id="@+id/signUpButton" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Don't have an account? Sign Up"
+        android:textColor="#1E3A8A" android:gravity="center" android:clickable="true"
+        android:focusable="true" app:layout_constraintTop_toBottomOf="@id/socialLoginLayout"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
